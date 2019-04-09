@@ -1,16 +1,16 @@
 const SearchUtils = require('./search-utils');
-const search = new SearchUtils.SearchUtils();
+const searchUtils = new SearchUtils.SearchUtils();
 
-search.on("search_hit", function (search, result) {
-    console.log(`The search term ${search} found ${result}.`)
+searchUtils.on("search_hit", function (search, result, count) {
+    console.log(`The search term ${search} found ${result}. There are ${count} listeners.`)
 })
 
-search.on("search_miss", function (search, result) {
+searchUtils.on("search_miss", function (search, result) {
     console.log(`The search term ${search} found ${result}.`)
 })
 
 var func = function(term){
-    search.search(term);
+    searchUtils.search(term);
 }
 
 console.log('Doing stuff...');
