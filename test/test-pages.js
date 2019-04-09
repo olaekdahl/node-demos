@@ -1,6 +1,6 @@
 //https://buddy.works/guides/how-automate-nodejs-unit-tests-with-mocha-chai
 //npm install mocha chai --save-dev
-//npm install reques
+//npm install request
 
 var expect  = require('chai').expect;
 var request = require('request');

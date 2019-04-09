@@ -2,6 +2,8 @@ var http = require('http');
 var fs = require('fs');
 var url = require('url');
 
+
+//curl --data email=ola@ciracon.com localhost:8080/data
 var server = http.createServer((req,resp)=>{
     if(req.url.match('/data')){
         var data = url.parse(req.url, true).query;

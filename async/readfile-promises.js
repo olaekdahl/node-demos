@@ -13,3 +13,7 @@ async function main() {
 main();
 
 console.log('More work....');
+
+var func = () =>{
+  return new Promise
+}
